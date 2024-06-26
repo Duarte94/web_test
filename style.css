@@ -16,9 +16,12 @@ li{
 
 #header{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#banner{
+    width: 60%;
 }
 
 .menu{
