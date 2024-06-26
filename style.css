@@ -1,0 +1,33 @@
+body{
+    background-color: #1E90FF;
+    color: #FFFF;
+}
+
+li{
+    float: left;
+    list-style-type: none;
+}
+
+/*.menu-nav{
+    display: flex;
+    margin-right: 15%;
+    margin-left: 15%;
+}*/
+
+#header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu{
+    border-top-style: solid; color: rgb(25, 83, 209);
+    border-bottom-style: solid; color: rgb(25, 83, 209);
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
