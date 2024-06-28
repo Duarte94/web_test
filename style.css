@@ -95,3 +95,44 @@ h1{
     margin-left: 20%;
     margin-right: 20%;
 }
+
+#mapContainer{
+    width: 250px;
+    height: 250px;
+    margin-top: 20px;
+    
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    background-color: rgb(136, 191, 255);
+    border-radius: 7%;
+    padding: 0px 40px 20px 40px;
+    width: 300px;
+    margin-top: 50px;
+}
+
+#submitContainer{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+label{
+    margin-top: 25px;
+}
+
+#submitBtn{
+    margin-top: 25px;
+}
+
+aside{
+    float:right;
+    position: relative;
+}
+
+#contactUs{
+    display: flex;
+}
