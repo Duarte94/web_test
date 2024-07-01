@@ -35,7 +35,7 @@ ul{
     align-items: center;
 }
 
-#servicesContainer{
+#servicesShortContainer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -150,7 +150,7 @@ aside{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/a.jpg');
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), #1e90ff), url('assets/a.jpg');
 }
 
 .servicesDetail{
