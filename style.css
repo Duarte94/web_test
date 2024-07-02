@@ -150,7 +150,14 @@ aside{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), #1e90ff), url('assets/a.jpg');
+}
+
+.left{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), #1e90ff), url("assets/4.jpg");
+}
+
+.right{
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), #1e90ff), url("assets/5.jpg");
 }
 
 .servicesDetail{
