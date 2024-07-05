@@ -50,6 +50,17 @@ ul{
     margin-top: 10%;
 }
 
+/* home - CLIENTS */
+
+.clientText{
+    height: 300px;
+    width: 100%;
+    background-image: url("assets/cliente1.jpg");
+    background-size: 75%;
+    background-color: #FFFFFF;
+    background-repeat: no-repeat;
+}
+
 /* home - APPLY */
 
 #homeApply{
