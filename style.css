@@ -53,12 +53,26 @@ ul{
 /* home - CLIENTS */
 
 .clientText{
+    display: flex;
+    flex-direction: column;
+    color: black;
     height: 300px;
     width: 100%;
     background-image: url("assets/cliente1.jpg");
     background-size: 75%;
     background-color: #FFFFFF;
     background-repeat: no-repeat;
+}
+
+#clientQuote{
+    font-size: larger;
+    align-items: center;
+    padding-left: 40%;
+    padding-right: 15%;
+}
+
+#clientSign{
+    padding-left: 35%;
 }
 
 /* home - APPLY */
