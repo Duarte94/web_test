@@ -52,27 +52,80 @@ ul{
 
 /* home - CLIENTS */
 
-.clientText{
-    display: flex;
-    flex-direction: column;
-    color: black;
-    height: 300px;
+.sliderContainer{
+    max-width: 100%;
     width: 100%;
-    background-image: url("assets/cliente1.jpg");
-    background-size: 75%;
-    background-color: #FFFFFF;
-    background-repeat: no-repeat;
+    box-sizing: border-box;
 }
 
-#clientQuote{
-    font-size: larger;
-    align-items: center;
-    padding-left: 40%;
-    padding-right: 15%;
+.sliderContainer>ul, li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
-#clientSign{
-    padding-left: 35%;
+.sliderContainer>ul.slider {
+    position: relative;
+    max-width: inherit;
+    width: 100%;
+    height: 300px;
+}
+
+.sliderContainer>ul.slider li {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    background: #fff;
+}
+
+.sliderContainer>ul.slider li img {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.sliderContainer>ul.slider li:first-child {
+    opacity: 1;
+    /*Mostramos el primer <li>*/
+}
+
+.sliderContainer>ul.slider li:target {
+    opacity: 1;
+    /*Mostramos el <li> del enlace que pulsemos*/
+}
+
+.sliderContainer>ul.slider p{
+    position: absolute;
+    color: black;
+}
+
+/* slider btn */
+
+.sliderContainer>.controlNav {
+    text-align: center;
+    margin: 20px;
+}
+
+.sliderContainer>.controlNav li {
+    display: inline-block;
+    text-align: center;
+}
+
+.sliderContainer>.controlNav li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: grey;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    border-radius: 100%;
 }
 
 /* home - APPLY */
