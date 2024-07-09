@@ -52,56 +52,29 @@ ul{
 
 /* home - CLIENTS */
 
-.sliderContainer{
+ul, li{
+    list-style: none;
+    padding: 0;
+}
+
+#container{
+    position: relative;
+    background-color: #FFFFFF;
     max-width: 100%;
     width: 100%;
+    max-height: 400px;
     box-sizing: border-box;
 }
 
-.sliderContainer>ul, li{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.sliderContainer>ul.slider {
-    position: relative;
-    max-width: inherit;
-    width: 100%;
-    height: 300px;
-}
-
-.sliderContainer>ul.slider li {
+.pImg{
     position: absolute;
-    left: 0px;
-    top: 0px;
-    opacity: 0;
-    width: inherit;
-    height: inherit;
-    transition: opacity .5s;
-    background: #fff;
-}
-
-.sliderContainer>ul.slider li img {
-    position: relative;
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.sliderContainer>ul.slider li:first-child {
-    opacity: 1;
-    /*Mostramos el primer <li>*/
-}
-
-.sliderContainer>ul.slider li:target {
-    opacity: 1;
-    /*Mostramos el <li> del enlace que pulsemos*/
-}
-
-.sliderContainer>ul.slider p{
-    position: absolute;
+    font-size: 20px;
+    top: 46%;
+    left: 64%;
     color: black;
+    transform: translate(-50%, -50%);
+    font-family: 'Courier New', Courier, monospace;
+    width: 50%;
 }
 
 /* slider btn */
@@ -111,12 +84,12 @@ ul{
     margin: 20px;
 }
 
-.sliderContainer>.controlNav li {
+#controlNav li {
     display: inline-block;
     text-align: center;
 }
 
-.sliderContainer>.controlNav li a {
+#controlNav li a {
     display: inline-block;
     color: white;
     text-decoration: none;
