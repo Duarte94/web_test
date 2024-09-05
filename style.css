@@ -4,31 +4,37 @@ body{
     margin: 0;
 }
 
+*{
+    font-family: Tahoma, Verdana, sans-serif;
+}
+
 ul{
     display: flex;
     position: relative;
     background-color: #0955a1;
     height: 50px;
     width: 100%;
-    padding-left: 0px;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    overflow: hidden;
 }
 
 li{
-    display: flex;
-    list-style-type: none;
+    float: left;
     height: inherit;
-    padding: 0px 10px;
-    overflow: hidden;
-    align-items: center;
 }
 
-a{
-    display: inherit;
+li a{
+    display: block;
     text-decoration: none;
-    height:inherit;
-    color: #ffffff;
+    color: #FFFFFF;
     text-align: center;
+    height: inherit;
+    padding: 14px 16px;
 }
+
+
 
 li:nth-child(4){
     position: absolute;
@@ -39,10 +45,6 @@ li:nth-child(4){
 li:hover{
     background-color: #083058;
     cursor: pointer;
-}
-
-a:active{
-    color: yellow;
 }
 
 header{
@@ -63,6 +65,7 @@ header{
     grid-template-rows: repeat(2, 1fr);
     justify-content: space-around;
     margin-top: 10%;
+    overflow: hidden;
 }
 
 .services img{
@@ -74,6 +77,12 @@ header{
     display: column;
     text-align: center;
     margin-top: 10%;
+    padding: 0px 25px;
+}
+
+.separator{
+    border-bottom: solid #0955a1 2px;
+    margin: 50px 250px 0 250px;
 }
 
 /* home - CLIENTS */
@@ -147,6 +156,7 @@ header{
 
 #applyText{
     text-align: center;
+    padding: 25px;
 }
 
 /* /////////////////////////////////// */
@@ -226,7 +236,6 @@ button {
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 3%;
 }
 
 #applyImg::after {
@@ -390,4 +399,19 @@ aside{
     font-size: large;
     align-self: center;
     padding: 5%;
+}
+
+/* Footer */
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(0,1fr);
+    align-items: center;
+    text-align: center;
+    margin-top: 20vh;
+}
+
+footer img{
+    margin: auto;
 }
