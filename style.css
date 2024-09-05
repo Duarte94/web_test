@@ -1,14 +1,51 @@
 body{
     background-color: #1E90FF;
     color: #FFFF;
+    margin: 0;
+}
+
+ul{
+    display: flex;
+    position: relative;
+    background-color: #0955a1;
+    height: 50px;
+    width: 100%;
+    padding-left: 0px;
 }
 
 li{
-    float: left;
+    display: flex;
     list-style-type: none;
+    height: inherit;
+    padding: 0px 10px;
+    overflow: hidden;
+    align-items: center;
 }
 
-#header{
+a{
+    display: inherit;
+    text-decoration: none;
+    height:inherit;
+    color: #ffffff;
+    text-align: center;
+}
+
+li:nth-child(4){
+    position: absolute;
+    right: 0;
+    width: 120px;
+}
+
+li:hover{
+    background-color: #083058;
+    cursor: pointer;
+}
+
+a:active{
+    color: yellow;
+}
+
+header{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,17 +53,6 @@ li{
 
 #banner{
     width: 60%;
-}
-
-.menu{
-    border-top-style: solid; color: rgb(25, 83, 209);
-    border-bottom-style: solid; color: rgb(25, 83, 209);
-}
-
-ul{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
 /* HOME */
@@ -52,10 +78,10 @@ ul{
 
 /* home - CLIENTS */
 
-ul, li{
+/*ul, li{
     list-style: none;
     padding: 0;
-}
+}*/
 
 #container{
     position: relative;
