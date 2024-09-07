@@ -60,7 +60,7 @@ i{
     padding-right: 15px;
 }
 
-li:nth-child(4){
+#contactFloat:nth-child(4){
     position: absolute;
     right: 0;
 }
