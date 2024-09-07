@@ -15,6 +15,8 @@ nav{
 }
 
 #headerImg{
+    display: flex;
+    background-image: url(assets/header_img.jpeg);
     position:relative;
     width: 100%;
     min-height: 100%;
@@ -24,15 +26,21 @@ nav{
     background-repeat: no-repeat;
 }
 
+#headerImg p{
+    align-self: center;
+    font-weight: bold;
+    font-size: 6vh;
+    padding-left: 4%;
+}
+
 ul{
     display: flex;
-    background-color: rgba(9, 85, 161, 0.9);
+    background-color: rgba(9, 85, 161, 1);
     height: 50px;
     width: 100%;
     padding: 0;
     margin: 0;
     list-style-type: none;
-
 }
 
 li{
@@ -41,12 +49,11 @@ li{
 }
 
 li a{
-    display: block;
+    display: inline-block;
     text-decoration: none;
     color: #FFFFFF;
-    text-align: center;
-    height: inherit;
-    padding: 14px 16px;
+    height: 35px;
+    padding: 15px 16px 0px 16px;
 }
 
 i{
@@ -64,6 +71,30 @@ li:hover{
 
     transition:ease-in-out;
     transition: .5s;
+}
+
+.dropdown-cont{
+    z-index: 1000;
+}
+
+.dropdown{
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropdown-cont:hover .dropdown:nth-child(2){
+    display: block;
+}
+
+#dropdown-list{
+    display: flex;
+    flex-direction: column;
+}
+
+#dropdown-list li{
+    display: inline-block;
+    height: 50px;
 }
 
 header{
