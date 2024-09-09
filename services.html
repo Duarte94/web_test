@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="assets/icon.png">
         <title>TechWave Solutions</title>
         <script src="https://kit.fontawesome.com/976281d8a1.js" crossorigin="anonymous"></script>
     </head>
@@ -14,9 +15,21 @@
         <nav class="menu">
             <ul>
                 <li><a class="menu-nav" href="index.html"><i class="fa-solid fa-house fa-lg" style="color: #ffffff;"></i> Home</a></li>
-                <li style="background-color: #083058;"><a id="servicesBtn" class="menu-nav" href="services.html"><i class="fa-solid fa-handshake-simple fa-lg" style="color: #ffffff;"></i> Servicios</a></li>
+                <li style="background-color: #083058;" class="dropdown-cont">
+                    <a id="servicesBtn" class="menu-nav" href="services.html"><i class="fa-solid fa-handshake-simple fa-lg" style="color: #ffffff;"></i> Servicios <i id="dropdown-arrow" class="fa-solid fa-caret-down fa-lg" style="color: #ffffff;"></i></a>
+
+                    <div class="dropdown">
+                        <ul id="dropdown-list">
+                            <li><a href="services.html">Desarrollo de Software a medida</a></li>
+                            <li><a href="services.html">Consultoría en transformación digital</a></li>
+                            <li><a href="services.html">Soluciones en la Nube</a></li>
+                            <li><a href="services.html">Ciberseguridad</a></li>
+                            <li><a href="services.html">Análisis de Datos y Big Data</a></li>
+                        </ul>
+                    </div>
+                </li>
                 <li><a id="aboutBtn" class="menu-nav" href="about-us.html"><i class="fa-solid fa-user fa-lg" style="color: #ffffff;"></i> Sobre nosotros</a></li>
-                <li><a id="contactBtn" class="menu-nav" href="contact.html"><i class="fa-solid fa-envelope fa-lg" style="color: #ffffff;"></i> Contacto</a></li>
+                <li id="contactFloat"><a id="contactBtn" class="menu-nav" href="contact.html"><i class="fa-solid fa-envelope fa-lg" style="color: #ffffff;"></i> Contacto</a></li>
             </ul>
         </nav>
 

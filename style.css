@@ -10,7 +10,7 @@ body{
 
 nav{
     position: sticky;
-    z-index: 1000;
+    z-index: 3;
     top: 0;
 }
 
@@ -29,8 +29,10 @@ nav{
 #headerImg p{
     align-self: center;
     font-weight: bold;
-    font-size: 6vh;
+    font-size: 10vh;
     padding-left: 4%;
+    min-width: 5vh;
+    min-height: 200px;
 }
 
 ul{
@@ -60,6 +62,11 @@ i{
     padding-right: 15px;
 }
 
+#dropdown-arrow{
+    padding-right: 0;
+    padding-left: 15px;
+}
+
 #contactFloat:nth-child(4){
     position: absolute;
     right: 0;
@@ -73,14 +80,18 @@ li:hover{
     transition: .5s;
 }
 
-.dropdown-cont{
-    z-index: 1000;
+#dropdown-list li:hover{
+    background-color: #083058;
+    cursor: pointer;
+
+    transition:ease-in-out;
+    transition: .5s;
 }
 
 .dropdown{
     display: none;
     position: absolute;
-    z-index: 1;
+    z-index: 2;
 }
 
 .dropdown-cont:hover .dropdown:nth-child(2){
@@ -90,11 +101,13 @@ li:hover{
 #dropdown-list{
     display: flex;
     flex-direction: column;
+    z-index: 1;
 }
 
 #dropdown-list li{
-    display: inline-block;
+    display: block;
     height: 50px;
+    background-color: #0955a1;
 }
 
 header{
