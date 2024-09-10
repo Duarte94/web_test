@@ -115,6 +115,7 @@ header{
     justify-content: center;
     align-items: center;
     background-color: #FFFFFF;
+    border-bottom: solid #083058 10px;
 }
 
 #banner{
@@ -374,7 +375,7 @@ form{
     display: flex;
     flex-direction: column;
     text-align: start;
-    background-color: rgb(136, 191, 255);
+    background-color:#0955a1;
     border-radius: 7%;
     padding: 0px 40px 20px 40px;
     width: 300px;
@@ -396,7 +397,11 @@ label{
 }
 
 #submitBtn{
+    font-size: large;
     margin-top: 25px;
+    width: 100px;
+    height: 30px;
+    align-self: center;
 }
 
 aside{
@@ -414,7 +419,6 @@ aside{
     display: flex;
     flex-direction: column;
     width: 100%;
-    
 }
 
 .servicesInfo{
@@ -426,11 +430,13 @@ aside{
 .leftImgContainer {
     position: relative;
     display: inline-block;
+    overflow: hidden;
 }
 
 .rightImgContainer {
     position: relative;
     display: inline-block;
+    overflow: hidden;
 }
 
 .leftImgContainer img {
@@ -471,6 +477,23 @@ aside{
     font-size: large;
     align-self: center;
     padding: 5%;
+}
+
+.servicesInfo:hover img{
+    transition: transform 10s ease;
+    transform: scale(1.2);
+}
+
+.servicesInfo:hover .leftImgContainer::after{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 65%, rgba(9, 85, 161, 1));
+}
+
+.servicesInfo:hover .rightImgContainer::after{
+    background: linear-gradient(to left, rgba(0, 0, 0, 0) 65%, rgba(9, 85, 161, 1));
+}
+
+.servicesInfo:hover{
+    background-color: #0955a1;
 }
 
 /* Footer */
