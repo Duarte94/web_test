@@ -29,10 +29,9 @@ nav{
 #headerImg p{
     align-self: center;
     font-weight: bold;
-    font-size: 10vh;
+    font-size: 4vw;
     padding-left: 4%;
-    min-width: 5vh;
-    min-height: 200px;
+    width: inherit;
 }
 
 ul{
@@ -147,7 +146,8 @@ header{
 
 .separator{
     border-bottom: solid #0955a1 2px;
-    margin: 50px 250px 0 250px;
+    margin: 0 250px 0 250px;
+    background-color: #083058;
 }
 
 /* home - CLIENTS */
@@ -201,13 +201,55 @@ header{
     border-radius: 100%;
 }
 
+#enterprisesCont{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(9, 85, 161, 0.5);
+    width: 80%;
+    height: 100%;
+    align-items: center;
+    margin: 10% 10% 0% 10%;
+    border-radius: 15px;
+    padding-bottom: 3%;
+}
+
+#enterprisesCont p{
+    font-weight: bold;
+    width: 80%;
+    height: 30%;
+    font-size: 100%;
+    color: #FFFFFF;
+    padding: 3% 0;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+    border-bottom: solid #083058 2px;
+}
+
+#logoCont{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    box-sizing: border-box;
+    margin-top: 5%;
+}
+
+.logo{
+    width: inherit;
+    margin: auto;
+}
+
 /* home - APPLY */
 
 #homeApply{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    margin-top: 6%;
+    margin: 10% 0;
 }
 
 #applyTextCont{
@@ -224,73 +266,24 @@ header{
     padding: 25px;
 }
 
-/* /////////////////////////////////// */
-
-button {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: inherit;
-    color: black;
-}
-
-/* Estilo base del botón */
-#applyBtn {
-    background-color: #FFD700; /* Color dorado */
+#applyBtn{
+    display: inline-block;
+    text-decoration: none;
     color: #FFFFFF;
-    border: none;
-    padding: 15px 30px;
-    font-size: 16px;
-    border-radius: 15px;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px #B8860B; /* Sombra para el efecto de relieve */
-    transition: all 0.3s ease;
+    background-color: #0955a1;
+    font-size: large;
+    text-align: center;
+    box-sizing:border-box;
+    width: 50vh;
+    height: 10vh;
+    padding: 18px 0;
+    border-radius: 10px;
 }
 
-/* Efecto de brillo en hover */
-#applyBtn:hover {
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+#applyBtn:hover{
+    background-color: #083058;
+    transition: ease 0.3s;
 }
-
-/* Efecto de brillo animado */
-@keyframes shine {
-    0% {
-        left: -100%;
-    }
-    100% {
-        left: 100%;
-    }
-}
-
-#applyBtn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    height: 100%;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.5);
-    transform: skewX(-20deg);
-    transition: 0.5s;
-}
-
-#applyBtn:hover::before {
-    animation: shine 0.5s linear forwards;
-}
-
-/* Cambio de color al hacer clic */
-#applyBtn:active {
-    background-color: #FFC700; /* Tono más oscuro de dorado */
-    box-shadow: 0 2px #B8860B; /* Ajuste de sombra para efecto de clic */
-    transform: translateY(2px); /* Simula el clic */
-}
-
-
-/* /////////////////////////////// */
 
 #applyImg{
     position: relative;
@@ -496,6 +489,38 @@ aside{
     background-color: #0955a1;
 }
 
+#contactContainer{
+    display: flex;
+    margin: 10% 0;
+    background-image: url("assets/contact-mini-img.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 175px;
+    width: 100%;
+    align-items: center;
+}
+
+#contactLink{
+    display: inline-block;
+    width: 50vh;
+    height: 10vh;
+    text-decoration: none;
+    margin-left: 20%;
+    background-color: rgba(9, 85, 161, 1);
+    text-align: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: large;
+}
+
+#contactLink:hover{
+    background-color: #083058;
+    transition: ease 0.3s;
+}
+
 /* Footer */
 
 footer{
@@ -504,7 +529,6 @@ footer{
     grid-template-rows: repeat(0,1fr);
     align-items: center;
     text-align: center;
-    margin-top: 20vh;
 }
 
 footer img{
