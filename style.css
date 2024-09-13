@@ -53,8 +53,13 @@ li a{
     display: inline-block;
     text-decoration: none;
     color: #FFFFFF;
-    height: 35px;
+    height: 100%;
     padding: 15px 16px 0px 16px;
+}
+
+#dropdown-list li{
+    height: 50px;
+    padding: 0;
 }
 
 i{
@@ -79,6 +84,10 @@ li:hover{
     transition: .5s;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 #dropdown-list li:hover{
     background-color: #083058;
     cursor: pointer;
@@ -101,12 +110,24 @@ li:hover{
     display: flex;
     flex-direction: column;
     z-index: 1;
+    height: 100%;
 }
 
 #dropdown-list li{
     display: block;
     height: 50px;
     background-color: #0955a1;
+}
+
+#servicesBtn{
+    background: none;
+    height: 100%;
+    color: #FFFFFF;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    padding: 0 16px;
+    font-size: inherit;
 }
 
 header{
@@ -146,7 +167,7 @@ header{
 
 .separator{
     border-bottom: solid #0955a1 2px;
-    margin: 0 250px 0 250px;
+    margin: 0 10%;
     background-color: #083058;
 }
 
@@ -204,7 +225,8 @@ header{
 #enterprisesCont{
     display: flex;
     flex-direction: column;
-    background-color: rgba(9, 85, 161, 0.5);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 5px 3px rgba(9, 85, 161, 0.7);
     width: 80%;
     height: 100%;
     align-items: center;
@@ -218,7 +240,7 @@ header{
     width: 80%;
     height: 30%;
     font-size: 2.5vw;
-    color: #FFFFFF;
+    color: #083058;
     padding: 3% 0;
     box-sizing: border-box;
     margin: 0;
@@ -250,6 +272,7 @@ header{
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
     margin: 10% 0;
+    box-sizing: border-box;
 }
 
 
@@ -264,7 +287,7 @@ header{
 
 #applyText{
     text-align: center;
-    padding: 25px;
+    padding: 0 25px;
     font-size: 1.2vw;
 }
 
@@ -276,9 +299,10 @@ header{
     font-size: 1.5vw;
     text-align: center;
     box-sizing:border-box;
-    width: 50vh;
-    height: 10vh;
-    padding: 18px 0;
+    width: 50%;
+    height: 15%;
+    padding: 3% 0;
+    margin-top: 5%;
     border-radius: 10px;
 }
 
@@ -289,13 +313,12 @@ header{
 
 #applyImg{
     position: relative;
-    display: inline-block;
+    display: flex;
 }
 
 #applyImg img{
-    display: block;
     width: 100%;
-    height: auto;
+    margin: 10% 0 10 0;
 }
 
 #applyImg::after {
@@ -319,9 +342,9 @@ header{
 }
 
 h3{
-    font-size: large;
-    margin-left: 20%;
-    margin-right: 20%;
+    font-size: 2em;
+    width: 100%;
+    margin: 0;
 }
 
 h1{
@@ -531,10 +554,16 @@ footer{
     grid-template-rows: repeat(0,1fr);
     align-items: center;
     text-align: center;
+    box-sizing: border-box;
 }
 
 footer img{
     margin: auto;
+    width: 50%;
+}
+
+footer p{
+    font-size: 0.75em;
 }
 
 /* HOME - Media Query*/
@@ -542,16 +571,45 @@ footer img{
 @media screen and (min-width:376px) and (max-width:767px){
 
     .menu-nav{
-        font-size: 0.7em;
-        padding: 18px 10px 18px 10px;
+        font-size: 0.8em;
+        padding: auto 10px;
+        box-sizing: border-box;
     }
 
     .menu-nav i{
         display: none;
     }
 
+    #servicesBtn{
+        height: 100%;
+        padding: auto 10px;
+        font-size: 0.8em;
+    }
+
+    .dropElement a{
+        font-size: 0.8em;
+    }
+
     #headerImg{
         max-height: 30vh;
+    }
+
+    #enterprisesCont{
+        height: fit-content;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 0px 5px 3px rgba(9, 85, 161, 0.7)
+
+    }
+
+    #enterprisesCont p{
+        color: #083058;
+        font-size: 1.250em;
+        padding: auto 0;
+    }
+    
+    .logo{
+        width: inherit;
+        margin: auto;
     }
 
     #homeApply{
@@ -562,17 +620,19 @@ footer img{
     }
 
     #applyTextCont h3{
-        font-size: 3em;
+        font-size: 4em;
+        width: 100%;
+        margin: 0;
     }
 
     #applyTextCont p{
-        font-size: 2em;
+        font-size: 2.750em;
     }
 
     #applyImg{
         position: absolute;
         z-index: -1;
-        top: 40%;
+        top: 60%;
         width: 100%;
     }
 
@@ -585,14 +645,107 @@ footer img{
         z-index: 1;
         position: relative;
         width: 50%;
-        height: 12%;
+        height: fit-content;
         text-decoration: none;
         color: #FFFFFF;
         background-color: #0955a1;
         font-size: 3.5vw;
         text-align: center;
         box-sizing:border-box;
-        padding: 25px 0;
+        margin-top: 30%;
+        border-radius: 10px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:375px){
+
+    .menu-nav{
+        font-size: 0.8em;
+        padding: auto 10px;
+        box-sizing: border-box;
+    }
+
+    .menu-nav i{
+        display: none;
+    }
+
+    #servicesBtn{
+        height: 100%;
+        padding: auto 10px;
+        font-size: 0.8em;
+    }
+
+    .dropElement a{
+        font-size: 0.8em;
+    }
+
+    #headerImg{
+        max-height: 20vh;
+    }
+
+    #enterprisesCont{
+        height: fit-content;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 0px 5px 3px rgba(9, 85, 161, 0.7)
+
+    }
+
+    #enterprisesCont p{
+        color: #083058;
+        font-size: 1em;
+        padding: auto 0;
+    }
+    
+    .logo{
+        width: inherit;
+        margin: auto;
+    }
+
+    #homeApply{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20%;
+    }
+
+    #applyTextCont h3{
+        font-size: 4em;
+        width: 100%;
+        margin: 0;
+    }
+
+    #applyTextCont p{
+        font-size: 3.4em;
+    }
+
+    #applyImg{
+        position: absolute;
+        z-index: -1;
+        top: 66%;
+        width: 100%;
+    }
+
+    #applyImg::after {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0) 50%, rgba(30, 144, 255, 1));
+    }
+
+    #applyBtn{
+        display: block;
+        z-index: 1;
+        position: relative;
+        width: 50%;
+        height: fit-content;
+        text-decoration: none;
+        color: #FFFFFF;
+        background-color: #0955a1;
+        font-size: 3.5vw;
+        text-align: center;
+        box-sizing:border-box;
         margin-top: 30%;
         border-radius: 10px;
     }
