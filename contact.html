@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/png" href="assets/icon.png">
         <title>TechWave Solutions</title>
@@ -10,24 +11,54 @@
     <body>
 
         <nav class="menu">
-            <ul>
+            <ul id="first-drop">
                 <li><a class="menu-nav" href="index.html"><i class="fa-solid fa-house fa-lg" style="color: #ffffff;"></i> Home</a></li>
                 <li class="dropdown-cont">
                     <button id="servicesBtn" class="menu-nav"><i class="fa-solid fa-handshake-simple fa-lg" style="color: #ffffff;"></i> Servicios <i id="dropdown-arrow" class="fa-solid fa-caret-down fa-lg" style="color: #ffffff;"></i></button>
 
                     <div class="dropdown">
-                        <ul id="dropdown-list">
-                            <li><a href="services.html#serv1">Desarrollo de Software a medida</a></li>
-                            <li><a href="services.html#serv2">Consultoría en transformación digital</a></li>
-                            <li><a href="services.html#serv3">Soluciones en la Nube</a></li>
-                            <li><a href="services.html#serv4">Ciberseguridad</a></li>
-                            <li><a href="services.html#serv5">Desarrollo Web y Móvil</a></li>
-                            <li><a href="services.html#serv6">Análisis de Datos y Big Data</a></li>
+                        <ul class="dropdown-list">
+                            <li class="dropElement"><a href="services.html#serv1">Desarrollo de Software a medida</a></li>
+                            <li class="dropElement"><a href="services.html#serv2">Consultoría en transformación digital</a></li>
+                            <li class="dropElement"><a href="services.html#serv3">Soluciones en la Nube</a></li>
+                            <li class="dropElement"><a href="services.html#serv4">Ciberseguridad</a></li>
+                            <li class="dropElement"><a href="services.html#serv5">Desarrollo Web y Móvil</a></li>
+                            <li class="dropElement"><a href="services.html#serv6">Análisis de Datos y Big Data</a></li>
                         </ul>
                     </div>
                 </li>
                 <li><a id="aboutBtn" class="menu-nav" href="about-us.html"><i class="fa-solid fa-user fa-lg" style="color: #ffffff;"></i> Sobre nosotros</a></li>
                 <li style="background-color: #083058;" id="contactFloat"><a id="contactBtn" class="menu-nav" href="contact.html"><i class="fa-solid fa-envelope fa-lg" style="color: #ffffff;"></i> Contacto</a></li>
+            </ul>
+
+            <ul id="second-drop">
+                <li class="dropdown-cont">
+
+                    <button class="dropdown-cont2" id="burger" style="display:block; background: none; box-shadow: none; outline: none; border:none; height: 100%; padding-left: 16px; padding-right: 16px;">
+                        <i class="fa-solid fa-bars fa-xl" style="color: #ffffff; padding-right: 0;"></i>
+                    </button>
+
+                    <div class="dropdown">
+
+                        <ul class="dropdown-list">
+
+                            <li class="dropElement"><a href="services.html">Servicios</a></li>
+                            <li class="dropElement"><a href="about-us.html">Sobre Nosotros</a></li>
+
+                        </ul>
+
+                    </div>
+
+                </li>
+
+                <li>
+                    <a class="menu-nav" href="index.html" style="padding-top: 25px; height: 100%;"><i class="fa-solid fa-house fa-xl" style="color: #ffffff; display: block; padding-right: 0;"></i></a>
+                </li>
+
+                <li class="menu-nav2" id="contactFloat2" style="position: absolute; right: 0;">
+                    <a id="contactBtn2" class="menu-nav2" href="contact.html"><i class="fa-solid fa-envelope fa-lg" style="color: #ffffff; padding-right: 0;"></i></a>
+                </li>
+
             </ul>
         </nav>
 
