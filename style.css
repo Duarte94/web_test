@@ -14,6 +14,14 @@ nav{
     top: 0;
 }
 
+#second-drop{
+    display: none;
+}
+
+#burger{
+    align-items: center;
+}
+
 #headerImg{
     display: flex;
     background-image: url(assets/header_img.jpeg);
@@ -57,7 +65,7 @@ li a{
     padding: 15px 16px 0px 16px;
 }
 
-#dropdown-list li{
+.dropdown-list li{
     height: 50px;
     padding: 0;
 }
@@ -88,7 +96,7 @@ button:hover{
     cursor: pointer;
 }
 
-#dropdown-list li:hover{
+.dropdown-list li:hover{
     background-color: #083058;
     cursor: pointer;
 
@@ -106,14 +114,14 @@ button:hover{
     display: block;
 }
 
-#dropdown-list{
+.dropdown-list{
     display: flex;
     flex-direction: column;
     z-index: 1;
     height: 100%;
 }
 
-#dropdown-list li{
+.dropdown-list li{
     display: block;
     height: 50px;
     background-color: #0955a1;
@@ -139,7 +147,7 @@ header{
 }
 
 #banner{
-    width: 60%;
+    width: 50%;
 }
 
 /* HOME */
@@ -227,10 +235,10 @@ header{
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0px 0px 5px 3px rgba(9, 85, 161, 0.7);
-    width: 80%;
+    width: 75vw;
     height: 100%;
     align-items: center;
-    margin: 10% 10% 0% 10%;
+    margin: 10% auto 0% auto;
     border-radius: 15px;
     padding-bottom: 3%;
 }
@@ -563,6 +571,7 @@ footer img{
 }
 
 footer p{
+    bottom: 0;
     font-size: 0.75em;
 }
 
@@ -663,6 +672,14 @@ footer p{
 }
 
 @media screen and (max-width:375px){
+
+    #first-drop{
+        display: none;
+    }
+
+    #second-drop{
+        display: block;
+    }
 
     .menu-nav{
         font-size: 0.8em;
