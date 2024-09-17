@@ -554,6 +554,55 @@ aside{
     transition: ease 0.3s;
 }
 
+.dropdown-cont2{
+    width: 100%;
+    position: relative;
+    background-color: #083058;
+    height: 5vh;
+    border: none;
+}
+
+.dropdown2{
+    display: none;
+    position: relative;
+    background-color: #083058;
+    font-size: 1.3em;
+}
+
+.mobileImg{
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 65%, rgba(30, 144, 255, 1));
+}
+
+#service1check:checked + .dropdown2{
+    display: block;
+}
+
+#service2check:checked + .dropdown2{
+    display: block;
+}
+
+#service1check:checked ~ #service2check:checked + .dropdown2,
+#service2check:checked ~ #service1check:checked + .dropdown2{
+    display: none;
+}
+
+.serviceChecker{
+    display: block;
+    margin: 0;
+    color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    font-size: 1.5em;
+    border: none;
+    text-align: center;
+    
+}
+
+.dropElement2text{
+    margin: 0;
+}
+
 /* Footer */
 
 footer{
@@ -575,9 +624,9 @@ footer p{
     font-size: 0.75em;
 }
 
-/* HOME - Media Query*/
+@media screen and (min-width:415px) and (max-width:767px){
 
-@media screen and (min-width:376px) and (max-width:767px){
+    /* HOME - Media Query*/
 
     #first-drop{
         display: none;
@@ -677,6 +726,66 @@ footer p{
         display: flex;
         flex-direction: column;
     }
+
+    #contactUs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Media query - CONTACT US */
+
+    #submitContainer{
+        margin-bottom: 10%;
+    }
+
+    #mapContainer{
+        left: 0;
+        right: 0;
+        height: min-content;
+        border-radius: 10px;
+        margin-bottom: 20%;
+    }
+
+    iframe{
+        height: 15vh;
+        border-radius: 10px;
+    }
+
+    /* Media Query - SERVICES */
+
+    #servicesWeb{
+        display: none;
+    }
+
+    #contactContainer{
+        position: relative;
+        display: flex;
+        margin: 10% 0;
+        background-image: url("assets/contact-mini-img.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 15vh;
+        width: 100%;
+        align-items: center;
+    }
+    
+    #contactLink{
+        display: inline-block;
+        width: 60vw;
+        height: 10vh;
+        text-decoration: none;
+        margin-left: 20%;
+        background-color: rgba(9, 85, 161, 1);
+        text-align: center;
+        padding: auto 0;
+        box-sizing: border-box;
+        border-radius: 10px;
+        color: #FFFFFF;
+        font-size: 1.8em;
+    }
+
 }
 
 @media screen and (max-width:414px){
