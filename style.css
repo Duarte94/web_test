@@ -58,11 +58,15 @@ li{
 }
 
 li a{
-    display: inline-block;
+    display: flex;
     text-decoration: none;
     color: #FFFFFF;
     height: 100%;
-    padding: 15px 16px 0px 16px;
+    margin: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+    align-items: center;
+    
 }
 
 .dropdown-list li{
@@ -342,46 +346,34 @@ header{
 
 /* ABOUT US */
 
-#history{
-    text-align: start;
-    margin-left: 20%;
-    margin-right: 20%;
-    font-size: large;
-}
-
-h3{
-    font-size: 2em;
-    width: 100%;
-    margin: 0;
-}
-
-h1{
-    text-align: center;
-    font-size: 50px;
-}
-
-#team img{
-    width: 150px;
-}
-
-#team{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    margin-left: 20%;
-    margin-right: 20%;
-}
-
-.teamInfo{
+#aboutCont{
     display: flex;
-    justify-content: start;
+    flex-direction: column;
+    width: 80%;
+    box-sizing: border-box;
     align-items: center;
-    font-size: large;
+    margin: auto;
 }
 
-#mision, #vision{
-    margin-left: 20%;
-    margin-right: 20%;
+#about-h1{
+    margin-top: 5%;
+    font-size: 3em;
+}
+
+.about-h3{
+    font-size: 2em;
+    color: #083058;
+    margin: 5% 5% 2.5% 5%;
+    width: fit-content;
+}
+
+.aboutText{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#history, #mision, #vision{
+    margin: 0 5% 5% 5%;
 }
 
 /* CONTACT US */
@@ -523,6 +515,7 @@ aside{
 }
 
 #contactContainer{
+    position: relative;
     display: flex;
     margin: 10% 0;
     background-image: url("assets/contact-mini-img.jpg");
@@ -552,55 +545,6 @@ aside{
 #contactLink:hover{
     background-color: #083058;
     transition: ease 0.3s;
-}
-
-.dropdown-cont2{
-    width: 100%;
-    position: relative;
-    background-color: #083058;
-    height: 5vh;
-    border: none;
-}
-
-.dropdown2{
-    display: none;
-    position: relative;
-    background-color: #083058;
-    font-size: 1.3em;
-}
-
-.mobileImg{
-    width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0) 65%, rgba(30, 144, 255, 1));
-}
-
-#service1check:checked + .dropdown2{
-    display: block;
-}
-
-#service2check:checked + .dropdown2{
-    display: block;
-}
-
-#service1check:checked ~ #service2check:checked + .dropdown2,
-#service2check:checked ~ #service1check:checked + .dropdown2{
-    display: none;
-}
-
-.serviceChecker{
-    display: block;
-    margin: 0;
-    color: #FFFFFF;
-    width: 100%;
-    height: 100%;
-    font-size: 1.5em;
-    border: none;
-    text-align: center;
-    
-}
-
-.dropElement2text{
-    margin: 0;
 }
 
 /* Footer */
@@ -637,9 +581,11 @@ footer p{
     }
 
     .menu-nav{
+        display: flex;
         font-size: 0.8em;
-        padding: auto 10px;
         box-sizing: border-box;
+        align-items: center;
+        padding-top: 0;
     }
 
     .menu-nav i{
@@ -653,7 +599,7 @@ footer p{
     }
 
     .dropElement a{
-        font-size: 0.8em;
+        font-size: 1.3em;
     }
 
     #headerImg{
@@ -700,6 +646,7 @@ footer p{
         z-index: -1;
         top: 60%;
         width: 100%;
+        height: 30vh;
     }
 
     #applyImg::after {
@@ -710,12 +657,12 @@ footer p{
         display: block;
         z-index: 1;
         position: relative;
-        width: 50%;
+        width: 60vw;
         height: fit-content;
         text-decoration: none;
         color: #FFFFFF;
         background-color: #0955a1;
-        font-size: 3.5vw;
+        font-size: 4vw;
         text-align: center;
         box-sizing:border-box;
         margin-top: 30%;
@@ -754,14 +701,48 @@ footer p{
 
     /* Media Query - SERVICES */
 
-    #servicesWeb{
-        display: none;
+    .servicesInfo:nth-child(odd){
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .servicesInfo:nth-child(even){
+        display: flex;
+        flex-direction: column;
+    }
+
+    .leftImgContainer{
+        overflow: hidden;
+    }
+
+    .rightImgContainer{
+        overflow: hidden;
+    }
+
+    .servicesInfo img{
+        height: 20vh;
+    }
+
+    .leftImgContainer::after {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0) 65%, rgba(30, 144, 255, 1));
+    }
+    
+    .rightImgContainer::after {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0) 65%, rgba(30, 144, 255, 1));
+    }
+
+    .servicesInfo:hover .leftImgContainer::after{
+        background: linear-gradient(to top, rgba(0, 0, 0, 0) 65%, rgba(9, 85, 161, 1));
+    }
+    
+    .servicesInfo:hover .rightImgContainer::after{
+        background: linear-gradient(to top, rgba(0, 0, 0, 0) 65%, rgba(9, 85, 161, 1));
     }
 
     #contactContainer{
         position: relative;
         display: flex;
-        margin: 10% 0;
+        margin: 10vh 0;
         background-image: url("assets/contact-mini-img.jpg");
         background-size: 100%;
         background-repeat: no-repeat;
@@ -773,8 +754,8 @@ footer p{
     
     #contactLink{
         display: inline-block;
-        width: 60vw;
-        height: 10vh;
+        width: 65vw;
+        height: 8vh;
         text-decoration: none;
         margin-left: 20%;
         background-color: rgba(9, 85, 161, 1);
@@ -784,6 +765,34 @@ footer p{
         border-radius: 10px;
         color: #FFFFFF;
         font-size: 1.8em;
+    }
+
+
+    /* Media Query - ABOUT US */
+
+    #aboutCont{
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #about-h1{
+        font-size: 3em;
+    }
+
+    .about-h3{
+        font-size: 2em;
+        color: #083058;
+        margin: 5%;
+        width: fit-content;
+    }
+
+    .aboutText{
+        font-size: 1em;
+        padding: 0;
+    }
+
+    #history, #mision, #vision{
+        margin: 5%;
     }
 
 }
