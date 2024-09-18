@@ -568,6 +568,273 @@ footer p{
     font-size: 0.75em;
 }
 
+@media screen and (min-width:768px) and (max-width:1024px){
+        /* HOME - Media Query*/
+
+        #first-drop{
+            display: none;
+        }
+    
+        #second-drop{
+            display: block;
+        }
+    
+        .menu-nav{
+            display: flex;
+            font-size: 1em;
+            box-sizing: border-box;
+            align-items: center;
+            padding-top: 0;
+        }
+
+        .menu-nav2{
+            font-size: 1.2em;
+        }
+
+        #burger{
+            font-size: 1em;
+        }
+    
+        .menu-nav i{
+            display: none;
+        }
+    
+        #servicesBtn{
+            height: 100%;
+            padding: auto 10px;
+            font-size: 0.8em;
+        }
+    
+        .dropElement a{
+            font-size: 2em;
+        }
+    
+        #headerImg{
+            max-height: 30vh;
+        }
+    
+        #enterprisesCont{
+            height: fit-content;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0px 0px 5px 3px rgba(9, 85, 161, 0.7)
+    
+        }
+    
+        #enterprisesCont p{
+            color: #083058;
+            font-size: 1.250em;
+            padding: auto 0;
+        }
+        
+        .logo{
+            width: inherit;
+            margin: auto;
+        }
+    
+        #homeApply{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20%;
+        }
+    
+        #applyTextCont h3{
+            font-size: 4em;
+            width: 100%;
+            margin: 0;
+        }
+    
+        #applyTextCont p{
+            font-size: 2.750em;
+        }
+    
+        #applyImg{
+            position: absolute;
+            z-index: -1;
+            top: 60%;
+            width: 100%;
+            height: 35vh;
+        }
+    
+        #applyImg::after {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0) 50%, rgba(30, 144, 255, 1));
+        }
+    
+        #applyBtn{
+            display: block;
+            z-index: 1;
+            position: relative;
+            width: 60vw;
+            height: fit-content;
+            text-decoration: none;
+            color: #FFFFFF;
+            background-color: #0955a1;
+            font-size: 4vw;
+            text-align: center;
+            box-sizing:border-box;
+            margin-top: 5vh;
+            border-radius: 10px;
+        }
+    
+        footer{
+            display: flex;
+            flex-direction: column;
+        }
+    
+        #contactUs{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        /* Media query - CONTACT US */
+    
+        #submitContainer{
+            margin-bottom: 10%;
+            width: 70%;
+        }
+
+        #contactForm{
+            width: 100%;
+        }
+
+        #contactForm label{
+            font-size: 1.5em;
+        }
+
+        #submitBtn{
+            font-size: 1.5em;
+            height: fit-content;
+        }
+
+        #adress{
+            font-size: 1.5em;
+        }
+    
+        #mapContainer{
+            left: 0;
+            right: 0;
+            height: min-content;
+            width: 50vw;
+            border-radius: 10px;
+            margin-bottom: 20%;
+        }
+    
+        iframe{
+            height: 29vh;
+            width: 100%;
+            border-radius: 10px;
+        }
+    
+        /* Media Query - SERVICES */
+    
+        .servicesInfo:nth-child(odd){
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    
+        .servicesInfo:nth-child(even){
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .leftImgContainer{
+            overflow: hidden;
+        }
+    
+        .rightImgContainer{
+            overflow: hidden;
+        }
+    
+        .servicesInfo img{
+            height: 30vh;
+        }
+    
+        .leftImgContainer::after {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0) 65%, rgba(30, 144, 255, 1));
+        }
+        
+        .rightImgContainer::after {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0) 65%, rgba(30, 144, 255, 1));
+        }
+    
+        .servicesInfo:hover .leftImgContainer::after{
+            background: linear-gradient(to top, rgba(0, 0, 0, 0) 65%, rgba(9, 85, 161, 1));
+        }
+        
+        .servicesInfo:hover .rightImgContainer::after{
+            background: linear-gradient(to top, rgba(0, 0, 0, 0) 65%, rgba(9, 85, 161, 1));
+        }
+    
+        #contactContainer{
+            position: relative;
+            display: flex;
+            margin: 10vh 0;
+            background-image: url("assets/contact-mini-img.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 20vh;
+            width: 100%;
+            align-items: center;
+        }
+        
+        #contactLink{
+            display: flex;
+            width: 65vw;
+            height: 8vh;
+            text-decoration: none;
+            margin-left: 20%;
+            background-color: rgba(9, 85, 161, 1);
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            box-sizing: border-box;
+            border-radius: 10px;
+            color: #FFFFFF;
+            font-size: 2em;
+        }
+        
+        .servicesDetail h2{
+            font-size: 2em;
+        }
+
+        .servicesDetail p{
+            font-size: 1.5em;
+        }
+    
+        /* Media Query - ABOUT US */
+    
+        #aboutCont{
+            width: 100%;
+            box-sizing: border-box;
+        }
+    
+        #about-h1{
+            font-size: 4em;
+        }
+    
+        .about-h3{
+            font-size: 3em;
+            color: #083058;
+            margin: 5%;
+            width: fit-content;
+            margin-bottom: 0;
+        }
+    
+        .aboutText{
+            font-size: 2em;
+            padding: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    
+        #history, #mision, #vision{
+            margin: 5%;
+        }
+    
+}
+
 @media screen and (min-width:415px) and (max-width:767px){
 
     /* HOME - Media Query*/
@@ -798,7 +1065,7 @@ footer p{
 
 }
 
-@media screen and (max-width:414px){
+@media screen and (min-width:365px) and (max-width:414px){
 
     /* HOME - Media Query*/
 
@@ -833,7 +1100,7 @@ footer p{
     }
 
     #headerImg{
-        max-height: 30vh;
+        max-height: 20vh;
     }
 
     #enterprisesCont{
@@ -876,7 +1143,7 @@ footer p{
         z-index: -1;
         top: 60%;
         width: 100%;
-        height: 30vh;
+        height: 28vh;
     }
 
     #applyImg::after {
@@ -1008,6 +1275,7 @@ footer p{
 
     #about-h1{
         font-size: 3em;
+        text-align: center;
     }
 
     .about-h3{
@@ -1025,4 +1293,242 @@ footer p{
     #history, #mision, #vision{
         margin: 5%;
     }
+}
+
+@media screen and (max-width: 364px){
+
+    /* HOME - Media Query*/
+
+    #first-drop{
+        display: none;
+    }
+
+    #second-drop{
+        display: block;
+    }
+
+    .menu-nav{
+        display: flex;
+        font-size: 0.8em;
+        box-sizing: border-box;
+        align-items: center;
+        padding-top: 0;
+    }
+
+    .menu-nav i{
+        display: none;
+    }
+
+    #servicesBtn{
+        height: 100%;
+        padding: auto 10px;
+        font-size: 0.8em;
+    }
+
+    .dropElement a{
+        font-size: 1.3em;
+    }
+
+    #headerImg{
+        max-height: 20vh;
+    }
+
+    #enterprisesCont{
+        height: fit-content;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 0px 5px 3px rgba(9, 85, 161, 0.7)
+
+    }
+
+    #enterprisesCont p{
+        color: #083058;
+        font-size: 1.250em;
+        padding: auto 0;
+    }
+    
+    .logo{
+        width: inherit;
+        margin: auto;
+    }
+
+    #homeApply{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20%;
+    }
+
+    #applyTextCont h3{
+        font-size: 4em;
+        width: 100%;
+        margin: 0;
+    }
+
+    #applyTextCont p{
+        font-size: 2.750em;
+    }
+
+    #applyImg{
+        position: absolute;
+        z-index: -1;
+        top: 60%;
+        width: 100%;
+        height: 20vh;
+    }
+
+    #applyImg::after {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0) 50%, rgba(30, 144, 255, 1));
+    }
+
+    #applyBtn{
+        display: block;
+        z-index: 1;
+        position: relative;
+        width: 60vw;
+        height: fit-content;
+        text-decoration: none;
+        color: #FFFFFF;
+        background-color: #0955a1;
+        font-size: 4vw;
+        text-align: center;
+        box-sizing:border-box;
+        margin-top: 5vh;
+        border-radius: 10px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contactUs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Media query - CONTACT US */
+
+    #submitContainer{
+        margin-bottom: 10%;
+        width: 100%;
+    }
+
+    #mapContainer{
+        left: 0;
+        right: 0;
+        height: min-content;
+        border-radius: 10px;
+        margin-bottom: 20%;
+    }
+
+    iframe{
+        height: 15vh;
+        border-radius: 10px;
+    }
+
+    /* Media Query - SERVICES */
+
+    .servicesInfo:nth-child(odd){
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .servicesInfo:nth-child(even){
+        display: flex;
+        flex-direction: column;
+    }
+
+    .leftImgContainer{
+        overflow: hidden;
+    }
+
+    .rightImgContainer{
+        overflow: hidden;
+    }
+
+    .servicesInfo img{
+        height: 20vh;
+    }
+
+    .leftImgContainer::after {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0) 65%, rgba(30, 144, 255, 1));
+    }
+    
+    .rightImgContainer::after {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0) 65%, rgba(30, 144, 255, 1));
+    }
+
+    .servicesInfo:hover .leftImgContainer::after{
+        background: linear-gradient(to top, rgba(0, 0, 0, 0) 65%, rgba(9, 85, 161, 1));
+    }
+    
+    .servicesInfo:hover .rightImgContainer::after{
+        background: linear-gradient(to top, rgba(0, 0, 0, 0) 65%, rgba(9, 85, 161, 1));
+    }
+
+    #contactContainer{
+        position: relative;
+        display: flex;
+        margin: 10vh 0;
+        background-image: url("assets/contact-mini-img.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 15vh;
+        width: 100%;
+        align-items: center;
+    }
+    
+    #contactLink{
+        display: flex;
+        width: 65vw;
+        height: 8vh;
+        text-decoration: none;
+        margin-left: 20%;
+        background-color: rgba(9, 85, 161, 1);
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        box-sizing: border-box;
+        border-radius: 10px;
+        color: #FFFFFF;
+        font-size: 1.3em;
+    }
+
+
+    /* Media Query - ABOUT US */
+
+    #aboutCont{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: fit-content;
+        align-items: center;
+        margin: 0;
+    }
+
+    #about-h1{
+        font-size: 3em;
+        margin: 5%;
+        width: fit-content;
+        text-align: center;
+    }
+
+    .about-h3{
+        font-size: 2em;
+        color: #083058;
+        margin: 5%;
+        width: fit-content;
+    }
+
+    .aboutText{
+        font-size: 1em;
+        padding: 0;
+    }
+
+    #history, #mision, #vision{
+        margin: 5%;
+    }
+
 }
